@@ -1,0 +1,6 @@
+*.pyc
+client_secrets.json
+settings.json
+build/*
+dist/*
+playpen_plus.egg-info/*

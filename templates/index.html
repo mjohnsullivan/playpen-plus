@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>{{ app_name }}</title>
+    <script src="https://plus.google.com/js/client:plusone.js"></script>
+    <script src="js/app.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+</head>
+<body>
+    <h1>{{ app_name }}</h1>
+
+    <div id="signin-button">
+        <div id="gConnect">
+        <button class="g-signin"
+            data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email"
+            data-requestvisibleactions="http://schemas.google.com/AddActivity"
+            data-clientId="{{ client_id }}"
+            data-accesstype="offline"
+            data-callback="onSignInCallback"
+            data-theme="dark"
+            data-cookiepolicy="single_host_origin">
+        </button>
+      </div>
+    </div>
+
+    <div id="connected">
+        <ul>
+            <li><a href="/email">email</a></li>
+            <li><a href="/me">Me</a></li>
+            <li><a href="/people">People</a></li>
+            <li><a href="/activity">Activity</a></li>
+            <li><a href="/moment">Moments</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $('#connected').hide()
+  $('#signin-button').hide()
+})
+
+</script>
+
+</body>
+</html>

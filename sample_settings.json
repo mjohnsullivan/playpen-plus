@@ -1,0 +1,4 @@
+{ "flask":
+  { "secret_key": "YOUR SECRET KEY"
+  }
+}
