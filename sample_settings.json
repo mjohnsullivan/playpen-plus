@@ -1,4 +1,5 @@
 { "flask":
-  { "secret_key": "YOUR SECRET KEY"
-  }
+  { "secret_key": "YOUR SECRET KEY" },
+  "google":
+  { "api_key": "APP API KEY" }
 }

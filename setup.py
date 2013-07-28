@@ -9,6 +9,5 @@ setup(
     description='Google+ APIs messing about',
     author='Matt Sullivan',
     author_email='matt.j.sullivan@gmail.com',
-    install_requires = ['flask>=0.10', 'Flask-KVSession>=0.4', 'google-api-python-client>=1.1'],
-    entry_points={'console_scripts': ['playpen-plus=plus.app:main']}
+    install_requires = ['flask>=0.10', 'Flask-KVSession>=0.4', 'google-api-python-client>=1.1']
 )
