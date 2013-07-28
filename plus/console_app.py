@@ -23,5 +23,14 @@ def search_people(query):
     return urlopen('https://www.googleapis.com/plus/v1/people?query=%s&key=%s' % (quote(query), API_KEY)).read()
 
 
+def search_activities(query, order_by_recent=True):
+    """
+    GET https://www.googleapis.com/plus/v1/activities?query=QUERY&key=KEY
+    """
+    return urlopen('https://www.googleapis.com/plus/v1/activities?query=%s&orderBy=%s&key=%s' %\
+        (quote(query), 'recent' if order_by_recent else 'best', API_KEY)).read()
+
+
 if __name__ == '__main__':
-    print search_people('gabe newell steam')
+    #print search_people('gabe newell steam')
+    print search_activities('#Otters')
